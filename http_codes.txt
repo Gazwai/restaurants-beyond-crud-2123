@@ -1,0 +1,11 @@
+200 -> OK
+201 -> Created
+
+302 -> Redirect
+
+401 -> Not Authorized (i know who you are, but you cant do that)
+403 -> Not Authenticated (i dont know who you are)
+404 -> Not found
+422 -> Unprocessable Entity (we failed to create something)
+
+500 -> Server Error

@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Add a Restaurant</h1>
+  <!-- <form action="/restaurants" method="post">
+    <input type="text" name="name">
+    <input type="text" name="address">
+  </form> -->
+  <%= simple_form_for @restaurant do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :rating %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>

@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   # prefix ONLY refers to the path, NOT the verb
 
   # get "/restaurants/top", to: "restaurants#top"
-  resources :hospitals do
+  resources :restaurants do
     resources :reviews, only: [:new, :create]
   end
 
-  resources :doctors, only: [:destroy, :show]
+  resources :reviews, only: [:destroy, :show]
   # CRUD routes
   # Create  -> two steps
   # form page (has a view)

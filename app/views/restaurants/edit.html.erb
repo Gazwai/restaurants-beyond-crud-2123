@@ -1,13 +1,4 @@
 <div class="container">
   <h1>Edit a Restaurant</h1>
-  <!-- <form action="/restaurants" method="post">
-    <input type="text" name="name">
-    <input type="text" name="address">
-  </form> -->
-  <%= simple_form_for @restaurant do |f| %>
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :rating %>
-    <%= f.submit 'Submit', class: 'btn btn-primary' %>
-  <% end %>
+  <%= render 'form', my_restaurant: @restaurant %>
 </div>

@@ -16,7 +16,8 @@ CHEFS.shuffle.each do |name|
     name: "#{name}'s #{restaurant_name}",
     rating: rand(3..5),
     address: "日本, 〒153-0063 東京都目黒区 目黒#{rand(1..3)}丁目#{rand(1..10)}番#{rand(1..3)}号",
-    category: get_category(restaurant_name)
+    category: get_category(restaurant_name),
+    chef_name: CHEFS.sample,
   )
 end
 puts "... created #{Restaurant.count} restaurants"

@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  # Set the restaurant for new and create
   before_action :set_restaurant, only: [:new, :create]
 
   def new
@@ -7,6 +8,8 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
+
+    # We assign the instance of restaurant to the review
     @review.restaurant = @restaurant
 
     if @review.save

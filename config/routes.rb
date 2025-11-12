@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  # verb + path
-  # http_verb '/path', to: 'controller#action', as: :prefix
-  # prefix ONLY refers to the path, NOT the verb
-
-  # get "/restaurants/top", to: "restaurants#top"
   resources :restaurants do
     resources :reviews, only: [:new, :create]
   end
 
   resources :reviews, only: [:destroy, :show]
+
+  # verb + path
+  # http_verb '/path', to: 'controller#action', as: :prefix
+  # prefix ONLY refers to the path, NOT the verb
+
   # CRUD routes
   # Create  -> two steps
   # form page (has a view)
